@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHero - Save the Planet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>♻️ EcoHero</h1>
+            <p>Complete daily tasks to save the planet & earn badges!</p>
+            
+            <div class="stats-card">
+                <div class="score-box">
+                    <span id="scoreDisplay">0</span>
+                    Total Points
+                </div>
+                <div class="score-box">
+                    <span id="tasksDisplay">0</span>
+                    Tasks Done
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <p>Level Progress (<span id="progressText">0%</span>)</p>
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div id="badgeContainer" class="badge-section">
+                </div>
+        </header>
+
+        <main id="challengeGrid" class="grid">
+            </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+:root {
+  --primary: #2ecc71;
+  --dark: #27ae60;
+  --bg: #f4fdf4;
+  --text: #2c3e50;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header & Stats */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.stats-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.score-box {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-box span {
+  color: var(--dark);
+  font-size: 2.5rem;
+  display: block;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.5s ease;
+}
+
+/* Badges Area */
+.badge-section {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #ddd;
+  padding: 10px 20px;
+  border-radius: 20px;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.badge.unlocked {
+  background: var(--primary);
+  color: white;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* Challenge Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+  border-left: 5px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.tag {
+  background: #e8f8f5;
+  color: var(--dark);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+button.action-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+button.action-btn:hover {
+  background: var(--dark);
+}
+
+button.action-btn.completed {
+  background: #95a5a6;
+  cursor: default;
+}
